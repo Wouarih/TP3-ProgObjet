@@ -101,7 +101,7 @@ https://classroom.github.com/a/IOu1E57Y
 `fr.umontpellier.iut.exo1` dans le package `fr.umontpellier.iut.exo2` en utilisant les outils de *refactoring* de l'IDE.
 Pour ce faire : clic droit sur le nom de la classe &rightarrow; _Refactor_ &rightarrow; _Copy_  
 
-On souhaite étoffer le modèle objet conçu auparavant en y incluant les aspects pédagogiques du département. Pour cela on vous demande de gérer les *matières*, les *enseignants* et les *notes*. 
+On souhaite étoffer le modèle objet conçu auparavant en y incluant les aspects pédagogiques du département. Pour cela on vous demande de gérer les *matières* et les *notes*. 
 
 1. Une `Matiere` est définie par un intitulé, un coefficient (une valeur réelle qui pourra servir pour le calcul d'une moyenne). Ajoutez dans `Matiere` une méthode accesseur `getCoefficient()` qui retourne le coefficient.
 
