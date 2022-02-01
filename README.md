@@ -32,16 +32,10 @@ L'objectif est de développer l'application de manière incrémentale en ajoutan
 
 Il est vivement recommandé d'utiliser au maximum les fonctionnalités de l'IDE pour réaliser les tâches courantes (renommage d'attributs/méthodes, génération des différentes méthodes : constructeurs, setters, getters, etc.).
 
-**Important :** Afin de garder une trace de la progression de votre application, il vous est demandé de travailler dans
-**un package différent pour chaque exercice**. Pour cela, vous copierez les classes écrites pour un exercice dans le
-package de l'exercice suivant à l'aide de l'IDE dans le panneau *Project* à gauche pour qu'il corrige automatiquement
-les déclarations de package. Garder une trace de progression pour chaque exercice vous permettra de mieux comparer
-votre travail pour chaque exercice et vous permettra également de mieux _réviser_ plus tard.
-
-
 ### Consignes
 - Sauf indication contraire, **tous** les attributs que vous allez déclarer dans ce TP (et dans les TPs qui suivent) doivent être privés (`private`).
 - A priori, la plupart des méthodes devraient être déclarées publiques (`public`). Vous pouvez tout de même déclarer et utiliser des méthodes `private` du moment qu'elles vous sont utiles et que votre programme fonctionne correctement.
+- Afin de garder une trace de la progression de votre application, il vous est demandé de travailler dans **un package différent pour chaque exercice**. Pour cela, vous copierez les classes écrites pour un exercice dans le package de l'exercice suivant à l'aide de l'IDE dans le panneau *Project* à gauche pour qu'il corrige automatiquement les déclarations de package. Garder une trace de progression pour chaque exercice vous permettra de mieux comparer votre travail pour chaque exercice et vous permettra également de mieux _réviser_ plus tard.
 - Date limite de rendu de votre code sur le dépôt GitHub : **dimanche 13 février à 23h**
 
 ### Exercice 1
@@ -55,45 +49,42 @@ votre travail pour chaque exercice et vous permettra également de mieux _révis
  
     class GestionEtudiants {
         public static void main(String[] args) {
-            LocalDate maDate = LocalDate.of(2021, Month.FEBRUARY, 4);
+            LocalDate maDate = LocalDate.of(2022, Month.FEBRUARY, 7);
         }
     }
     ```
 
    **Astuce :** Si vous utilisez la classe `LocalDate` dans votre code sans l'importer, l'IDE vous proposera automatiquement de l'importer (placez le curseur sur le nom de la classe et appuyez sur <kbd>Alt</kbd>+<kbd>↵</kbd> pour ajouter automatiquement la ligne `import java.time.LocalDate;` au début de votre fichier).
 
-   Pour représenter les autres attributs vous pouvez utiliser le type `String`. Munissez également la classe d’un constructeur.
+   Pour représenter les autres attributs vous pouvez utiliser le type `String`.
+
+   Munissez également la classe d’un constructeur.
 
    **Astuce :** L'IDE peut générer automatiquement le code des méthodes usuelles pour une classe. Ainsi, après avoir déclaré les attributs de votre classe, faites un clic droit dans le code de la classe et sélectionnez «*Generate...*» (ou <kbd>Alt</kbd>+<kbd>Insert</kbd>) puis choisissez «*Constructor*». Sélectionnez les attributs que vous souhaitez passer directement en argument au constructeur (ici tous) et validez. Vous pouvez évidemment modifier par la suite le constructeur ainsi généré.
 
-1. Créez la méthode `toString()` (qui renvoie un objet de type `String`) générant un texte de présentation des informations concernant l'objet `Etudiant`.
+3. Créez la méthode `String toString()` qui retourne un texte de présentation des informations concernant l'objet `Etudiant`.
 
-   **Attention :** cette méthode n’affiche rien, elle se contente de produire une chaîne de caractères. Ce à quoi sert ce texte (par ex. à être affiché à l’écran, ou être écrit dans un fichier) dépend de l’utilisation de la méthode.
+   **Attention :** cette méthode n’affiche rien, elle se contente de produire une chaîne de caractères. Ce à quoi sert ce texte (par ex. à être affiché à l’écran ou être écrit dans un fichier) dépend de l’utilisation de la méthode.
 
-1. Ajoutez une fonction `setNom(...)` qui permet de changer le nom d'un objet de type `Etudiant`.
+4. Ajoutez une fonction `void setNom(...)` qui permet de changer le nom d'un objet de type `Etudiant`.
 
-1. Vérifiez votre solution dans le programme principal (la classe `GestionEtudiants`) en instanciant dans la méthode `main(...)` une variable `lolo` de type `Etudiant` et en affichant ses informations.
+5. Vérifiez votre solution dans le programme principal (la classe `GestionEtudiants`) en instanciant dans la méthode `main(...)` une variable `lolo` de type `Etudiant` et en affichant ses informations.
 
-   **Astuce :** L'IDE possède des raccourcis pour les morceaux de codes fréquemment utilisés. Par exemple, pour
-   faire un affichage à la console avec `System.out.println()`, tapez «`sout`» à l'endroit où vous souhaitez insérer
-   l'instruction la fonction et appuyez sur la touche <kbd>↹</kbd> (tabulation) pour que «`sout`» soit remplacé par
-   la déclaration complète (`System.out.println()`). Vous pouvez voir la liste des raccourcis disponibles à tout moment
-   en appuyant sur <kbd>Ctrl</kbd>+<kbd>J</kbd> (les raccourcis disponibles dépendent du contexte, par exemple si
-   vous êtes en train d'écrire une méthode, directement à la racine d'une classe, etc.).
+   **Astuce :** L'IDE possède des raccourcis pour les morceaux de codes fréquemment utilisés. Par exemple, pour faire un affichage à la console avec `System.out.println()`, tapez «`sout`» à l'endroit où vous souhaitez insérer l'instruction la fonction et appuyez sur la touche <kbd>↹</kbd> (tabulation) pour que «`sout`» soit remplacé par la déclaration complète (`System.out.println()`). Vous pouvez voir la liste des raccourcis disponibles à tout moment en appuyant sur <kbd>Ctrl</kbd>+<kbd>J</kbd> : les raccourcis disponibles dépendent du contexte, par exemple si vous êtes en train d'écrire une méthode, directement à la racine d'une classe, etc.
 
-1. Créez une nouvelle variable `toto` de type `Etudiant` construite avec exactement les mêmes paramètres que `lolo`. Comparez les deux variables avec l'opérateur `==`. Que constatez-vous ?
+6. Créez une nouvelle variable `toto` de type `Etudiant` construite avec exactement les mêmes paramètres que `lolo`. Comparez les deux variables avec l'opérateur `==`. Que constatez-vous ?
 
-1. On se rend compte qu'en fait, `toto` est juste un surnom de `lolo`. Modifiez votre programme pour faire en sorte que `toto` fasse référence à `lolo`. En invoquant la méthode `setNom(...)` sur l'objet `toto`, vérifiez que la modification se répercute bien sur `lolo`.
+7. On se rend compte qu'en fait, `toto` est juste un surnom de `lolo`. Modifiez votre programme pour faire en sorte que `toto` fasse référence à `lolo`. En invoquant la méthode `setNom(...)` sur l'objet `toto`, vérifiez que la modification se répercute bien sur `lolo`.
 
-1. Créez une classe `Departement` qui aura comme attributs une spécialité, une adresse et un tableau d'étudiants inscrits géré sous forme de liste. Pour déclarer une telle liste vous pouvez utiliser la classe `ArrayList` du package `java.util` (voir un exemple dans le cours). Munissez la classe d'un constructeur, qui prend comme paramètre un intitulé et une adresse. Définissez la méthode `toString()` dans `Departement` avec un texte qui liste l'ensemble des étudiants du département.
+8. Créez une classe `Departement` qui aura comme attributs : une spécialité, une adresse et un tableau d'étudiants inscrits géré sous forme de liste. Pour déclarer une telle liste vous pouvez utiliser la classe `ArrayList` du package `java.util` (voir un exemple dans le cours). Munissez la classe d'un constructeur, qui prend comme paramètre un intitulé et une adresse. Définissez la méthode `toString()` dans `Departement` retournant un texte qui liste l'ensemble des étudiants du département.
 
    **Indication :** Pensez à utiliser les fonctionnalités de l'IDE pour importer la classe `ArrayList` et pour générer le constructeur et la méthode `toString()`.
 
-1. Ajoutez une méthode `inscrire(...)` dans la classe `Departement` qui prend en paramètre un étudiant et l'ajoute aux étudiants inscrits du département.
+9. Ajoutez une méthode `void inscrire(...)` dans la classe `Departement` qui prend en paramètre un étudiant et l'ajoute aux étudiants inscrits du département.
 
-1. Ajoutez une méthode `desinscrire(...)` qui supprime un étudiant passé en paramètre de la liste des étudiants inscrits.
+10. Ajoutez une méthode `void desinscrire(...)` qui supprime un étudiant passé en paramètre de la liste des étudiants inscrits.
 
-1. Simulez votre application dans la classe principale en créant un département `monDepInfo` et en y inscrivant quatre étudiants (dont `toto` et `lolo` définis précédemment). Désinscrivez ensuite `toto` du département. Que constatez-vous ?
+11. Simulez votre application dans la classe principale en créant un département `monDepInfo` et en y inscrivant quatre étudiants (dont `toto` et `lolo` définis précédemment). Désinscrivez ensuite `toto` du département. Que constatez-vous ?
 
 ### Exercice 2
 
