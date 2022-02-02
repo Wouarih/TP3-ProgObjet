@@ -88,9 +88,8 @@ Il est vivement recommandé d'utiliser au maximum les fonctionnalités de l'IDE 
 
 ### Exercice 2
 
-**Rappel :** Pour préserver le code écrit dans l'exercice précédent, copiez l'ensemble des classes du package
-`fr.umontpellier.iut.exo1` dans le package `fr.umontpellier.iut.exo2` en utilisant les outils de *refactoring* de l'IDE.
-Pour ce faire : clic droit sur le nom de la classe &rightarrow; _Refactor_ &rightarrow; _Copy_
+**Rappel :** Pour préserver le code écrit dans l'exercice précédent, copiez l'ensemble des classes du package `fr.umontpellier.iut.exo1` dans le package `fr.umontpellier.iut.exo2` en utilisant les outils de *refactoring* de l'IDE.
+Pour ce faire : sélectionnez les classes **simultanément** &rightarrow; clic droit  &rightarrow; _Refactor_ &rightarrow; _Copy Classes_
 
 On souhaite étoffer le modèle objet conçu auparavant en y incluant les aspects pédagogiques du département. Pour cela on vous demande de gérer les *matières* et les *notes*.
 
