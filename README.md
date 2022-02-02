@@ -129,16 +129,12 @@ On souhaite étoffer le modèle objet conçu auparavant en y incluant les aspect
 
 ### Exercice 3 (Bonus)
 
-Observez que la classe `Etudiant` a un constructeur avec 5 paramètres. Bien entendu, le nombre de paramètres risque
-de croître car beaucoup d'autres attributs sont susceptibles d'être ajoutés à la classe `Etudiant`.
-Observez aussi que lorsqu'on construit une instance d'`Etudiant` il est facile de se tromper dans l'ordre des paramètres
-du constructeur. Heureusement que l'IDE vous aide en vous suggérant cet ordre lorsque vous programmez...
-De plus, les valeurs de certains attributs peuvent être inconnues au moment de la construction de l'objet : l'adresse de l'étudiant n'est pas encore connue car l'attribution des logements universitaires par les organismes correspondants n'a pas encore eu lieu, l'adresse mail n'est pas encore active au moment de l'inscription de l'étudiant, etc. Plusieurs solutions peuvent être envisagées :
+Observez que la classe `Etudiant` a un constructeur avec 5 paramètres. Bien entendu, le nombre de paramètres risque de croître, puisque beaucoup d'autres attributs sont susceptibles d'être ajoutés à la classe `Etudiant`. Observez aussi que lorsqu'on construit une instance d'`Etudiant` il est facile de se tromper dans l'ordre des paramètres du constructeur. Heureusement que l'IDE vous aide en vous suggérant cet ordre lorsque vous programmez...
+De plus, les valeurs de certains attributs peuvent être inconnues au moment de la construction de l'objet : peut-être l'adresse de l'étudiant n'est pas encore connue, car l'attribution des logements universitaires par les organismes correspondants n'a pas encore eu lieu ; l'adresse mail n'est pas encore active au moment de l'inscription de l'étudiant, etc. Plusieurs solutions peuvent être envisagées :
 
-1. Une solution est de définir plusieurs constructeurs avec différents paramètres et de les faire collaborer (voir exemples en [cours](https://www.lirmm.fr/~pvalicov/Cours/M2103/BPOO_Generalites_x4.pdf)).
-   Ainsi, l'utilisateur pourra choisir le constructeur qui lui convient. C’est ce qu’on appelle une *construction télescopique*.
+1. Une solution est de définir plusieurs constructeurs avec différents paramètres et de les faire collaborer (voir les exemples en [cours](https://www.lirmm.fr/~pvalicov/Cours/dev-objets/Generalites_x4.pdf)). Ainsi, l'utilisateur pourra choisir le constructeur qui lui convient. C’est ce qu’on appelle une *construction télescopique*. Essayons !
 
-   Créez une nouvelle classe `EtudiantTelescopique` (en copiant les attributs de la classe `Etudiant` de l'exercice 2) et modifiez-la afin de pouvoir instancier les étudiants de différentes manières :
+   Créez une nouvelle classe `EtudiantTelescopique` (en copiant les attributs de la classe `Etudiant` de l'exercice 2) et modifiez-la afin de pouvoir instancier les étudiants de 3 manières suivantes :
     - en indiquant uniquement le nom et le prénom
     - en indiquant uniquement le nom, le prénom et la date de naissance
     - en indiquant uniquement le nom, le prénom et le mail
@@ -183,10 +179,6 @@ De plus, les valeurs de certains attributs peuvent être inconnues au moment de 
 
    Ajoutez la classe `EtudiantBuilder` à votre application pour que l'instruction ci-dessus fonctionne.
 
-**Pour aller plus loin :** Vous noterez que la classe `EtudiantBuilder` sert uniquement à instancier des objets `Etudiant` de manière
-"organisée" et lisible. Le problème est qu'il est toujours possible d'instancier un objet de type `Etudiant`
-sans utiliser le _builder_ que vous avez écrit...
-C'est pour cela qu'il est possible d'améliorer la dernière solution en déclarant la classe `EtudiantBuilder`
-comme classe interne statique de la classe `Etudiant` et de rendre `private` le constructeur de la classe `Etudiant`.
-Ainsi la construction pourra se faire exclusivement à travers le _builder_ et celui-ci servira uniquement à la construction des objets de type `Etudiant`, car c'est son seul rôle. Pour plus de détails et explications, voir le modèle de conception _Builder_.
-Une explication approfondie est donnée dans _Effective Java_, J. Blosch, (2nd or 3rd edition).
+**Pour aller plus loin :** Vous noterez que la classe `EtudiantBuilder` sert uniquement à instancier des objets `Etudiant` de manière "organisée" et lisible. Le problème est qu'il est toujours possible d'instancier un objet de type `Etudiant` sans utiliser le _builder_ que vous avez écrit... C'est pour cela qu'il est possible d'améliorer la dernière solution en déclarant la classe `EtudiantBuilder` comme classe interne statique de la classe `Etudiant` et de rendre `private` le constructeur de la classe `Etudiant`. Ainsi la construction pourra se faire exclusivement à travers le _builder_ et celui-ci servira uniquement à la construction des objets de type `Etudiant`, car c'est son seul rôle. Pour plus de détails et explications, voir le modèle de conception _Builder_.
+
+Une explication approfondie des Builders est donnée dans _Effective Java_, J. Blosch, (2nd or 3rd edition).
