@@ -100,9 +100,7 @@ On souhaite étoffer le modèle objet conçu auparavant en y incluant les aspect
 
 1. Ajoutez à la classe `Etudiant` un attribut correspondant à la liste de ses notes et une méthode `noter(...)` qui prend en paramètre une matière et une valeur réelle, crée un objet de type `Note` et l'ajoute à la liste des notes de l'étudiant.
 
-1. Sans toucher au code des autres classes, ajoutez à la classe `Etudiant` une méthode `calculerMoyenne()` qui permet
-   de calculer la moyenne pondérée des notes de l'étudiant. Pensez à ajouter des tests unitaires pour vérifier le bon fonctionnement
-   de cette fonction. Pour créer une classe de tests unitaires, placez-vous dans la classe que vous souhaitez tester et :
+1. Sans toucher au code des autres classes, ajoutez à la classe `Etudiant` une méthode `double calculerMoyenne()` qui retourne la moyenne pondérée des notes de l'étudiant. Pensez à ajouter des tests unitaires pour vérifier le bon fonctionnement de cette fonction. Pour créer une classe de tests unitaires, placez-vous dans la classe que vous souhaitez tester et :
     * appuyez sur <kbd>Alt</kbd>+<kbd>Insert</kbd> (ou bien faites un clic droit sur le nom de la classe &rightarrow;
       _Generate_)
     * Choisissez _Test..._
@@ -125,7 +123,7 @@ On souhaite étoffer le modèle objet conçu auparavant en y incluant les aspect
 
 1. Maintenant, on souhaite calculer la moyenne de toute la promo. Ajoutez dans la classe `Departement` la méthode `double getMoyennePromo()` qui retourne la moyenne de toute la promo et des tests unitaires appropriés dans la classe correspondante.
 
-1. Qu'observez-vous lorsque vous comparez les fonctions`calculerMoyenne()` de la classe `Etudiant` et `double getMoyennePromo()` de la classe `Departement`. Quelles seraient les modifications à apporter au programme afin d'éviter cette duplication de code ?
+1. Qu'observez-vous lorsque vous comparez les fonctions `calculerMoyenne()` de la classe `Etudiant` et `getMoyennePromo()` de la classe `Departement`. Quelles seraient les modifications à apporter au programme afin d'éviter cette duplication de code ?
 
 1. Construisez le diagramme de classes correspondant au programme *Java* que vous avez écrit.
 
