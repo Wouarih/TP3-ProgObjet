@@ -74,7 +74,7 @@ Il est vivement recommandé d'utiliser au maximum les fonctionnalités de l'IDE 
 
 5. Créez une nouvelle variable `toto` de type `Etudiant` construite avec exactement les mêmes paramètres que `lolo`. Comparez les deux variables avec l'opérateur `==`. Que constatez-vous ?
 
-6. On se rend compte qu'en fait, `toto` est juste un surnom de `lolo`. Modifiez votre programme pour faire en sorte que `toto` fasse référence à `lolo`. En invoquant la méthode `setNom(...)` sur l'objet `toto`, vérifiez que la modification se répercute bien sur `lolo`.
+6. On se rend compte que `toto` devrait être un surnom de `lolo`. Modifiez votre programme pour faire en sorte que `toto` fasse référence à `lolo`. En invoquant la méthode `setNom(...)` sur l'objet `toto`, vérifiez que la modification se répercute bien sur `lolo`.
 
 7. Créez une classe `Departement` qui aura comme attributs : une spécialité, une adresse et un tableau d'étudiants inscrits géré sous forme de liste. Pour déclarer une telle liste vous pouvez utiliser la classe `ArrayList` du package `java.util` (voir un exemple dans le cours). Munissez la classe d'un constructeur, qui prend comme paramètre un intitulé et une adresse. Définissez la méthode `toString()` dans `Departement` retournant un texte qui liste l'ensemble des étudiants du département.
 
@@ -108,9 +108,7 @@ On souhaite étoffer le modèle objet conçu auparavant en y incluant les aspect
     * Choisissez _Test..._
     * dans l'onglet _Testing library_ vous choisirez l'option _JUnit 5_
     * donnez un nom approprié à votre classe de tests unitaires (par ex. `EtudiantTest`) et cliquez sur _Ok_.
-
-    * Comme pour le TP précédent, la classe de tests générée sera automatiquement placée dans le même package que la classe
-      testée et dans le répertoire correspondant aux tests. Pour écrire vos tests, vous pouvez vous inspirer des exemples vues dans le TP précédent. Vous devez ajouter au moins les tests suivants :
+    * Comme pour le TP précédent, la classe de tests générée sera automatiquement placée dans le même package que la classe testée et dans le répertoire correspondant aux tests. Pour écrire vos tests, vous pouvez vous inspirer des exemples vus dans le TP précédent. Vous devez ajouter au moins les tests suivants :
 
       ```
        test_calcul_moyenne_retourne_zero_Quand_Pas_De_Note()
@@ -123,9 +121,13 @@ On souhaite étoffer le modèle objet conçu auparavant en y incluant les aspect
 
       `assertEquals(double expected, double actual, double delta)`
 
-5. Vérifiez que votre programme fonctionne bien en l'exécutant depuis la classe principale.
+1. Vérifiez que votre programme fonctionne bien en l'exécutant depuis la classe principale.
 
-6. Construisez le diagramme de classes correspondant au programme *Java* que vous avez écrit.
+1. Maintenant, on souhaite calculer la moyenne de toute la promo. Ajoutez dans la classe `Departement` la méthode `double getMoyennePromo()` qui retourne la moyenne de toute la promo et des tests unitaires appropriés dans la classe correspondante.
+
+1. Qu'observez-vous lorsque vous comparez les fonctions`calculerMoyenne()` de la classe `Etudiant` et `double getMoyennePromo()` de la classe `Departement`. Quelles seraient les modifications à apporter au programme afin d'éviter cette duplication de code ?
+
+1. Construisez le diagramme de classes correspondant au programme *Java* que vous avez écrit.
 
 ### Exercice 3 (Bonus)
 
