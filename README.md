@@ -127,7 +127,7 @@ On souhaite étoffer le modèle objet conçu auparavant en y incluant les aspect
 
 1. **Bonus** : Construisez le diagramme de classes correspondant au programme *Java* que vous avez écrit.
 
-### Exercice 3 (Bonus)
+### Exercice 3
 
 Observez que la classe `Etudiant` a un constructeur avec 5 paramètres. Bien entendu, le nombre de paramètres risque de croître, puisque beaucoup d'autres attributs sont susceptibles d'être ajoutés à la classe `Etudiant`. Observez aussi que lorsqu'on construit une instance d'`Etudiant` il est facile de se tromper dans l'ordre des paramètres du constructeur. Heureusement que l'IDE vous aide en vous suggérant cet ordre lorsque vous programmez...
 De plus, les valeurs de certains attributs peuvent être inconnues au moment de la construction de l'objet : peut-être l'adresse de l'étudiant n'est pas encore connue, car l'attribution des logements universitaires par les organismes correspondants n'a pas encore eu lieu ; l'adresse mail n'est pas encore active au moment de l'inscription de l'étudiant, etc. Plusieurs solutions peuvent être envisagées :
@@ -159,7 +159,7 @@ De plus, les valeurs de certains attributs peuvent être inconnues au moment de 
 
 1. Comparez cette solution avec celle de la classe `EtudiantTelescopique`. Quels sont les avantages et les inconvénients ?
 
-1. Finalement, on vous demande de développer une solution en combinant les bonnes idées des deux versions précédentes. Voici comment on voudrait pouvoir créer des étudiants dans la classe principale :
+1. **Bonus** : Finalement, on vous demande de développer une solution en combinant les bonnes idées des deux versions précédentes. Voici comment on voudrait pouvoir créer des étudiants dans la classe principale :
 
     ```java
     class GestionEtudiants {
