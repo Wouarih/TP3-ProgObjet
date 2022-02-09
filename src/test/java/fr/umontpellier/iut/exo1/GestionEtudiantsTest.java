@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 class GestionEtudiantsTest {
 
-    @Disabled
+
     @Test
     public void test_if_main_method_does_not_throw_exceptions() {
 
