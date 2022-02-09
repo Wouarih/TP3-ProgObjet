@@ -17,6 +17,7 @@ public class Etudiant {
         this.birthday = birthday;
         this.email = email;
         this.adress = adress;
+        this.listenote = new ArrayList<>();
     }
 
     @Override
