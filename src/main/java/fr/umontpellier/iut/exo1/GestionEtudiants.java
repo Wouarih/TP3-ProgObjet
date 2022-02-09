@@ -13,7 +13,7 @@ public class GestionEtudiants {
         Etudiant toto = new Etudiant("Oiry", "Clement", LocalDate.of(1997, 8, 14), "clement.oiry79@gmail.com","2 rue Marchand");
 
         //Verification du setLastName
-        //etudiant1.setLastName("Wouarih");
+        lolo.setLastName("Wouarih");
         System.out.println(lolo);
 
         //Comparaison des deux variables
@@ -21,7 +21,7 @@ public class GestionEtudiants {
         //La comparaison donne comme réponse "false" car l'adresse des variables sont différentes malgré les mêmes attributs
 
         //Le programme toto est surnom de lolo, il doit faire reference à lolo
-        //toto = lolo;
+        toto = lolo;
 
         //Test de la référence
         toto.setLastName("Waaariii");
@@ -49,6 +49,8 @@ public class GestionEtudiants {
 
         monDepInfo.desincrire(toto);
         System.out.println(monDepInfo);
+
+        //Supprime le premier élément de la liste,lolo, et non toto car les deux avaient la même référence
 
     }
 }
