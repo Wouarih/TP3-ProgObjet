@@ -14,4 +14,11 @@ class DepartementTest {
         assertEquals(0.0, moyenne, 0.0);
     }
 
+    @Test
+    public void test_calcul_moyenne_departement_retourne_valeur_note_quand_une_seule_note() {
+
+        double moyenne = info.getMoyennePromo();
+        assertEquals(0.0, moyenne, 0.0);
+    }
+
 }
