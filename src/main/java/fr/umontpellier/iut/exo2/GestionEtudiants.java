@@ -2,7 +2,7 @@ package fr.umontpellier.iut.exo2;
 
 import java.time.LocalDate;
 
-public class GestionEtudiants extends Departement {
+public class GestionEtudiants{
     public static void main(String[] args) {
 
         Departement info = new Departement("Informatique", "Montpellier");
