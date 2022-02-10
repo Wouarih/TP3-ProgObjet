@@ -40,8 +40,19 @@ public class Etudiant {
         listenote.add(n);
     }
 
-    public double calculerMoyenne(){
+    public double calculerMoyenne() {
 
+        double sommenote = 0;
+        double sommecoeff = 0;
+        for (int i = 0; i < listenote.size(); i++) {
+            sommenote = sommenote + listenote.get(i).getNote() * listenote.get(i).getMat().getCoefficient();
+            sommecoeff = sommecoeff + listenote.get(i).getMat().getCoefficient();
+        }
+        if (sommecoeff == 0) {
+            return 0;
+        } else {
+            return sommenote / sommecoeff;
+        }
     }
 
 }

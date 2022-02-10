@@ -21,12 +21,27 @@ public class Departement {
                 '}';
     }
 
-    public void inscrire(Etudiant e1){
+    public void inscrire(Etudiant e1) {
         tab.add(e1);
     }
 
-    public void desincrire(Etudiant e1){
+    public void desincrire(Etudiant e1) {
         tab.remove(e1);
     }
 
+    double getMoyennePromo() {
+
+        double sommenoteE = 0;
+
+        for (int i = 0; i < tab.size(); i++) {
+            sommenoteE = sommenoteE + tab.get(i).calculerMoyenne();
+
+        }
+        if (tab.size() == 0) {
+            return 0;
+        } else {
+            return sommenoteE / tab.size();
+        }
+
+    }
 }

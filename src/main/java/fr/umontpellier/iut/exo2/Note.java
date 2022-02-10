@@ -14,7 +14,8 @@ public class Note {
         return mat;
     }
 
-    public double getNote(Matiere m) {
+    public double getNote() {
         return note;
     }
+
 }
